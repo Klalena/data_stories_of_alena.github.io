@@ -35,11 +35,11 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "alena.kalodzitsa@gmail.com"
-  facebook: ?
-  github: Klalena 
-  twitter: @kalodzitsa
+  #facebook: ?
+  github: "Klalena"
+  twitter: "@kalodzitsa"
 #  reddit: yourname
-  linkedin: https://www.linkedin.com/in/alenakalodzitsa/
+  linkedin: "https://www.linkedin.com/in/alenakalodzitsa/"
 
 
 #  xing: yourname
