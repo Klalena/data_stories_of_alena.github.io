@@ -18,14 +18,14 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-#avatar: "/assets/img/avatar_img.jpg"
+avatar: "/assets/img/avatar_img.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+round-avatar: false
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-title-img: "/assets/img/avatar_img.jpg"
+#title-img: "/assets/img/avatar_img.jpg"
 
 
 # --- Footer social media links --- #
@@ -84,12 +84,12 @@ excerpt_length: 50
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#121f16"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-page-col: "#7c677f"
+navbar-col: "#5D5C61"
+navbar-text-col: "#557A95"
+navbar-border-col: "#7395aE"
+page-col: "#B1A296"
 text-col: "#404040"
-link-col: "#008AFF"
+link-col: "#557A95"
 hover-col: "#0085A1"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
