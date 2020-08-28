@@ -4,7 +4,7 @@ title: Alena Kalodzitsa
 subtitle: Data Science Student 
 ---
 
-<img align="left" width = "284" height = "386" style="float:left padding-:10px" src="/assets/img/08200007.1.jpg" >
+<img align="left" width = "284" height = "386" style="float:left padding-right:30px" src="/assets/img/08200007.1.jpg" > 
 
 
 
