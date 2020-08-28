@@ -28,7 +28,7 @@ The next step is to rename the forked repo from Beautiful-Jekyll to **youruserna
   
 This will create a website with the Beautiful-Jekyll template with the following address: `<https://yourusername.github.io]>`. 
 
-:warning: Please note that you need to use your GitHub username when renaming the forked repo. If you don't, you will end up having a long website name. For example, if you name your repository as **mycoolproject/github.io** , you will get this long address: `<https://yourusername.github.io/mycoolproject/github.io>` -- believe me, it's not pleasing to the eye. 
+⚠️ Please note that you need to use your GitHub username when renaming the forked repo. If you don't, you will end up having a long website name. For example, if you name your repository as **mycoolproject/github.io** , you will get this long address: `<https://yourusername.github.io/mycoolproject/github.io>` -- believe me, it's not pleasing to the eye. 
 
 ## Step IV: You've got it -- just style it 
 
