@@ -1,8 +1,10 @@
 ---
 layout: post
-title: How to Make Personal Website with GitHub Pages
+title: How Easily Make Personal Website 
+subtitle: Using GitHub Pages and Beautiful Jekyll 
+cover-img: /assets/img/cover_pic_website.jpg
 thumbnail-img: /assets/img/website_image.png
 tags: [website, GitHub]
 ---
 
-Making your own website is easier and faster that one may think. This tutorial explains how to build your Github Pages  website using Beatifull Jekyll. 
+A personal website is a great tool to showcase your projects and blog about topics that you are passionate about. Unfortunately, there is a misconception that making a personal website is a painful, time-consuming, and costly process. Consequently, this prevents many talented people from sharing their scientific/art projects with employers and the world. This tutorial proves the opposite, guiding you step by step on how to create a free and elegant website in hours if not minutes! Without further ado, let's get started! 
