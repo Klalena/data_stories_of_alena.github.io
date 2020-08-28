@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Make Personal Website with GitHub Pages
-cover-img: /assets/img/website_image.png
+imgage: /assets/img/website_image.png
 tags: [website, GitHub]
 ---
 
