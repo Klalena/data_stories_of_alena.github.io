@@ -18,7 +18,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/5O8A0028.jpg"
+avatar: "/assets/img/avatar_img.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -36,7 +36,7 @@ social-network-links:
   email: "alena.kalodzitsa@gmail.com"
   #facebook: ?
   github: "Klalena"
-  twitter: "@kalodzitsa"
+  #twitter: "@kalodzitsa"
 #  reddit: yourname
   linkedin: "https://www.linkedin.com/in/alenakalodzitsa/"
 
@@ -59,7 +59,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: This website is a virtual proof that I'm awesome
+#rss-description: This website is a virtual proof that I'm awesome
 
 # --- General options --- #
 
@@ -90,7 +90,7 @@ navbar-border-col: "#123C69"
 page-col: "#EEE2DC"
 text-col: "#404040"
 link-col: "#AC3B61"
-hover-col: "#123C69"
+hover-col: "#59253A"
 footer-col: "#123C69"
 footer-text-col: "#FEFFFF"
 footer-link-col: "#AC3B61"
@@ -191,13 +191,13 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
-      readtime: false # add estimated reading time on all blog posts
+      readtime: true # add estimated reading time on all blog posts
   -
     scope:
       path: "" # all files
     values:
       layout: "page"
-      show-avatar: true
+      show-avatar: false
 
 # Exclude these files from production site
 exclude:
