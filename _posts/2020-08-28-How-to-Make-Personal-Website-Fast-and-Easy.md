@@ -26,6 +26,6 @@ The next step is to rename the forked repo from Beautiful-Jekyll to **<yourusern
   
 ![setting](/assets/img/settings.png)
   
-This will create a website with the Beautiful-Jekyll template with the following address: *https://yourusername.github.io* . 
+This will create a website with the Beautiful-Jekyll template with the following address: **https://yourusername.github.io** . 
 
-:warning: Please note that you need to use your GitHub username when renaming the forked repo. If you don't, you will end up having a long website name. For example, if you name your repository as *mycoolproject/github.io* , you will get this long address: *https://yourusername.github.io/mycoolproject/github.io* -- believe me, it's not pleasing to the eye. 
+:warning: Please note that you need to use your GitHub username when renaming the forked repo. If you don't, you will end up having a long website name. For example, if you name your repository as **mycoolproject/github.io** , you will get this long address: **https://yourusername.github.io/mycoolproject/github.io** -- believe me, it's not pleasing to the eye. 
