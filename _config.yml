@@ -11,7 +11,7 @@ author: Alena Kalodzitsa
 navbar-links:
   About Me: "aboutme"
   Portfolio:
-    - How to quickly Make your Personal Website on GitHub Pages (with Jekyll): 
+    - How To Make Personal Website With Github Pages: "https://klalena.github.io/2020-08-28-How-to-make-personal-website-with-GitHub-Pages/"
   LinkedIn: "https://www.linkedin.com/in/alenakalodzitsa/"
 
 # --- Logo --- #
@@ -72,7 +72,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "klalena.github.io/"
+url-pretty: "klalena.github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
