@@ -12,8 +12,8 @@ A personal website is a great tool to showcase your projects and blog about topi
 **Key ingridients**: GitHub, Beaitiful Jekyll, and your creativity. 
 
 ## Step I: Open GitHub Account 
-If you don' have one, you wil need to sign up [here] (https://github.com/). GitHub is a free version control tool that let you host one static website through GitHub Pages, which will be used for this tutorial. 
+If you don' have one, you wil need to sign up [here](https://github.com/). GitHub is a free version control tool that let you host one static website through GitHub Pages, which will be used for this tutorial. 
 
 ## Step II: Fork Beautiful-Jekyll Repository
-Fork [Beautiful-Jekyll project] (https://github.com/daattali/beautiful-jekyll/) by clicking on *Fork* as shown below: 
+Fork [Beautiful-Jekyll project](https://github.com/daattali/beautiful-jekyll/) by clicking on *Fork* as shown below: 
 ![fork](/assets/img/fork.jpeg) 
