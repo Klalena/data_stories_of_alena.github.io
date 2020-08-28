@@ -30,6 +30,19 @@ This will create a website with the Beautiful-Jekyll template with the following
 
 ⚠️ Please note that you need to use your GitHub username when renaming the forked repo. If you don't, you will end up having a long website name. For example, if you name your repository as **mycoolproject/github.io** , you will get this long address: `<https://yourusername.github.io/mycoolproject/github.io>` -- believe me, it's not pleasing to the eye. 
 
-## Step IV: You've got it -- just style it 
+⚠️ Also, if you have an issue opening your website (like I did), this [video](https://www.youtube.com/watch?v=BA_c3bGQXlQ) might solve your problem. 
 
-Congratulations! You've just created your own website. Indeed, it was not that bad. Now, you just need to style it. 
+## Step IV: Customize your website 
+
+Congratulations! You've just created your own website. Indeed, it was not that bad. Now, you just need to custimize it. 
+
+1. Open `<_config.yml>`file in the repository and make all the relevent changes to the default settings. To make the changes, click on the *pencil* icon displayed at the top right corner. The settings are mostly self-explanatory and should not be hard to follow. Once you are done, press *commit* button and the website will be updated within a few minutes. 
+
+For example, you may want to personalize the colors of your website: 
+Here are the default colors: 
+![colors](/assets/img/colors.png) 
+
+💡 When choosing colors for your website, I found this [article](https://visme.co/blog/website-color-schemes/) helpful. Also, you can make your own color using [this color picker](https://www.google.com/search?q=color+picker). 
+
+2. 
+For more information, please check [here](https://github.com/daattali/beautiful-jekyll). 
