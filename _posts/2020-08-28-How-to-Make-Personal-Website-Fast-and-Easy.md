@@ -16,13 +16,16 @@ If you don' have one, you wil need to sign up [here](https://github.com/). GitHu
 
 ## Step II: Fork Beautiful-Jekyll Repository (repo)
 Fork [Beautiful-Jekyll project](https://github.com/daattali/beautiful-jekyll/) by clicking on *Fork* as shown below: 
+
 ![fork](/assets/img/fork.jpeg) 
+
 Once you have this repo, you will have all it needs to make a simple yet elegant website. 
 
 ## Step III: Rename your repository 
-The next step is to rename the forked repo from Beautiful-Jekyll to **<yourusername>.github.io**. For this, you need to click on setting and rename the repo as shown below:
+The next step is to rename the forked repo from Beautiful-Jekyll to **<yourusername>.github.io** . For this, you need to click on setting and rename the repo as shown below:
+  
 ![setting](/assets/img/settings.png)
   
-This will create a website with the Beautiful-Jekyll template with the following address: *https://yourusername.github.io*. 
+This will create a website with the Beautiful-Jekyll template with the following address: *https://yourusername.github.io* . 
 
-:warning: Please note that you need to use your GitHub username. If you don't, you will end up having a long website name. For example, if you name your repository as *mycoolproject/github.io*, you will have this long address: *https://yourusername.github.io/mycoolproject/github.io* -- believe me, it's not pleasing to the eye. 
+:warning: Please note that you need to use your GitHub username when renaming the forked repo. If you don't, you will end up having a long website name. For example, if you name your repository as *mycoolproject/github.io* , you will get this long address: *https://yourusername.github.io/mycoolproject/github.io* -- believe me, it's not pleasing to the eye. 
