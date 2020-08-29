@@ -51,7 +51,7 @@ Here are the default colors:
 
 Next, change the title and text in `aboutme.md` and `index.html` documents found in your project repo. The content in these files is displayed in  *About me* section and home page of your website respectively. 
 
-#### 2) Add your posts to `_posts`
+#### 3) Add your posts to `_posts`
 
 Lastly, add your posts to the  `_posts` folder in your repo. You will see two posts already there, which you can remove. 
 
