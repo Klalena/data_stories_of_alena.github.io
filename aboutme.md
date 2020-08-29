@@ -4,7 +4,7 @@ title: Alena Kalodzitsa
 subtitle: Data Science Student 
 ---
 
-<img  width = "370" height = "506" style="float:left; margin-right: 8px;" src="/assets/img/08200007.1.jpg" > 
+<img  width = "259" height = "354" style="float:left; margin-right: 8px;" src="/assets/img/08200007.1.jpg" > 
 
    Currently, I am a student pursuing [MS in Interdisciplinary Data Science](https://datascience.duke.edu/) at Duke University. I have an academic background in Business Administration and Economics and professional experience in finance.  I decided to pursue data science because I like to be challenged, enjoy continuous learning, and love to see the impact that data-driven decisions can have on companies and individuals. 
    
