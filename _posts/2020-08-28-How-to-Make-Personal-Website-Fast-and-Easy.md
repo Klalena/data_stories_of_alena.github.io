@@ -12,7 +12,7 @@ A personal website is a great tool to showcase your projects. Unfortunately, the
 **Key ingredients** GitHub, Beautiful Jekyll, and your creativity. 
 
 ## Step I: Open GitHub Account 
-If you don' have one, you will need to sign up [here](https://github.com/). GitHub is a free version control tool that let you host one static website through GitHub Pages, which we will use for this tutorial. 
+If you don' have one, you will need to sign up [here](https://github.com/). GitHub is a free version control tool that lets you host one static website through GitHub Pages, which we will use for this tutorial. 
 
 ## Step II: Fork Beautiful-Jekyll Repository (repo)
 Fork [Beautiful-Jekyll project](https://github.com/daattali/beautiful-jekyll/) by clicking on *Fork* as shown below: 
@@ -22,7 +22,7 @@ Fork [Beautiful-Jekyll project](https://github.com/daattali/beautiful-jekyll/) b
 Once you have this repo, you will have all it needs to make a simple yet elegant website. 
 
 ## Step III: Rename your repository 
-The next step is to rename the forked repo from Beautiful-Jekyll to **yourusername.github.io**. For this, you need to click on setting and rename the repo as shown below:
+The next step is to rename the forked repo from Beautiful-Jekyll to **yourusername.github.io**. For this, you need to click on settings and rename the repo as shown below:
   
 ![setting](/assets/img/settings.png)
   
@@ -61,7 +61,7 @@ Lastly, add your posts to the  `_posts` folder in your repo. You will see two po
    - Ends with `.md`
    - Words of the file name are separated with `-`
 
-For example, if you look at the address of this page,  you can see that the name of this post is `2020-08-28-How-to-Make-Personal-Website-Fast-and-Easy.md`. To learn more about the basics of Markdown, check [here](2020-08-28-How-to-Make-Personal-Website-Fast-and-Easy.md). 
+For example, if you look at the address of this page,  you can see that the name of this post is `2020-08-28-How-to-Make-Personal-Website-Fast-and-Easy.md`. To learn more about the basics of Markdown, check [here](https://guides.github.com/features/mastering-markdown/#intro). 
 
 Now, that you know about the right format of the post, it's time to create one! To do so, you need to click on `Add File --> Upload` and name the post in the **'year-m-d-the-name-of-file.md'** format. 
 
