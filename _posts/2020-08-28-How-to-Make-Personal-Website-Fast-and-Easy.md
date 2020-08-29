@@ -36,7 +36,7 @@ This will create a website with the Beautiful-Jekyll template with the following
 
 Congratulations! You've just created your own website. Indeed, it was not that bad. Now, you just need to customize it. 
 
-#### 1) `_config.yml`
+#### 1) Change settings in `_config.yml`
 
 Open `_config.yml` file in the repository and make all the relevant changes to the default settings. To make the changes, click on the *pencil* icon displayed at the top right corner. The settings are mostly self-explanatory and should not be hard to follow. Once you are done, press *commit* button, and the website will be updated within a few minutes. 
 
@@ -47,11 +47,11 @@ Here are the default colors:
 
 💡 When choosing colors for your website, I found this [article](https://visme.co/blog/website-color-schemes/) helpful. Also, you can make your own color using [this](https://www.google.com/search?q=color+picker) color picker. 
 
-#### 2) `aboutme.md` and `index.html` 
+#### 2) Add text in `aboutme.md` and `index.html` 
 
 Next, change the title and text in `aboutme.md` and `index.html` documents found in your project repo. The text in `aboutme.md` file will be displayed in  *About me* section of your website, while text in `index.html` is displayed on the home page. 
 
-#### 2) `_posts`
+#### 2) Add your posts in  `_posts`
 
 Lastly, to add your posts, go to `_posts` folder in your repo. You will see two posts there, which you can remove. 
 
