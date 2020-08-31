@@ -206,6 +206,16 @@ img {
   color: {{ site.navbar-text-col | default: "#FFFFFF" }}; !important;
 }
 
+#change
+.navbar-default .navbar-nav li a {
+    color: #fff; !important;
+}
+
+#page .dropdown-menu>.active>a{
+background-color: transparent;
+}
+
+
 .navbar-toggler {
   font-size: 1rem;
   margin: 0.5rem 0;
