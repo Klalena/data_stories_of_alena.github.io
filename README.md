@@ -1,1 +1,1 @@
-Personal website using Beautiful Jekyll 
+Personal website using Beautiful Jekyll. 
