@@ -9,23 +9,17 @@ tags: [Euler]
 
 In this post I will explain how I solved three problems from the [Project Euler](https://projecteuler.net/) using Python. Project Euler is  a website publishing computational problems that are solved with computer programs.  The three problems I chose have different level of difficulty as listed below: 
 
-1. Problem 4: *Largest palindrome product*--  solved by < 500,000 people
-
-2. Problem 35: *Circular primes* -- Solved by < 100,000 people
-
-3. Problem 112: *Bouncy numbers*  --Solved by < 25,000 people
-
-   
+1. Problem 4: *Largest palindrome product* (Solved by < 500,000 people)
+2. Problem 35: *Circular primes* ( Solved by < 100,000 people)
+3. Problem 112: *Bouncy numbers*  (Solved by < 25,000 people)
 
 # #4: Largest palindrome product
 
 *Palindrome* is the number/word/phrase that can be read the same backward as forward. For example, 303  and 7557 are  palindromes. 
 
-<u>Problem<u> : 
+**Question**: Find the largest palindrome made from the product of two 3-digit numbers. 
 
-Find the largest palindrome made from the product of two 3-digit numbers. 
-
-## Approach 
+###  Approach 
 
 First, I created a function to check whether the number is palindrome or not. The function takes a  number and checks whether this number is equivalent to the reversed number, in which case the functions returns `True`  and `False`  otherwise. 
 
@@ -46,6 +40,7 @@ def IsPalindrome(number):
 Next, I used nested for loop to get a product of two 3-digit numbers and checked whether it is a palindrome. If the product is a palindrome, it is added to the list of palindromes and the largest palindrome is printed. 
 
 ```python
+import numpy as np 
 def main():
     """
     Prints out the largest palindrome made from the product of two 3-digit numbers. 
@@ -62,9 +57,77 @@ def main():
     
 ```
 
-<u> Solution<u> : 
-
-`The number of circular primes below one million is 55. `
+** Solution**: `The largest palindrome made from the product of two 3-digit numbers is 906,609.`
 
 # #35: Circular primes
+
+*Circular prime* is a prime number for which the rotations of its digits are also prime numbers. For example, 199 is a circular number because 919 and 991 are also prime numbers. There are 13 circular numbers below 100: 
+
+ 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97`
+
+**Question**: How many circular primes are there below one million?
+
+### Approach 
+
+I started by creating a function to check whether the number is circular. This function inputs a prime number and checks whether all its rotations are also prime numbers, in which case it returns  `True` and `False` otherwise. I used `sympy.isprime()` method (``sympy` module) to check if the number is a prime  and list-like container `deque` ( `collections` library) to rotate the number. 
+
+```python
+import sympy
+from collections import deque
+
+def IsCircular(prime): 
+    """
+    The function checks whether the number is circular prime,
+    which is a prime number where all the rotations of its digits
+    are also prime numbers.
+
+    Input: prime number
+    Output: Boolean, where True means that the number is circular 
+    """
+    circular = True 
+    prime = list(str(prime))
+    d = deque()
+    [d.append(x) for x in prime]
+    for i in range(1, len(prime)):
+        d.rotate(1)
+        rotated_prime = int("".join(list(d)))
+        if not sympy.isprime(rotated_prime):
+            circular = False
+    return circular
+```
+
+Instead of using `sympy.isprime` method, you can also create your own function the checks if the number is a prime. Here is a simple example for the `IsPrime` function. I would not recommend to use it because it can  slow down your program, which is why I decided to use `sympy` method for that. 
+
+```python
+def IsPrime(number):
+     prime = True
+     for i in range(2, number): 
+         if (number % i) == 0: 
+             prime = False             
+     return prime
+```
+
+Then, I iterated through the numbers from 100 to 100000, checking whether a number is a circular prime number. If the number is a circular prime, it's appended to the list of circular primes below 100. The main function prints out the  number of circular primes below one million and the list of these primes
+
+```python
+def main():
+  
+    """This program prints the number of circular primes below one million 
+    and the list of these primes."""
+    
+    primes = [2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97]
+    for i in range(100,1000000):
+        if sympy.isprime(i) and IsCircular(i): 
+            primes.append(i)
+    print(f'The number of circular primes below one million is {len(primes)}. ')
+    print(primes)
+```
+
+
+
+** Solution**: `The number of circular primes below one million is 55. `
+
+`[2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97, 113, 131, 197, 199, 311, 337, 373, 719, 733, 919, 971, 991, 1193, 1931, 3119, 3779, 7793, 7937, 9311, 9377, 11939, 19391, 19937, 37199, 39119, 71993, 91193, 93719, 93911, 99371, 193939, 199933, 319993, 331999, 391939, 393919, 919393, 933199, 939193, 939391, 993319, 999331]`
+
+# #112: Bouncy numbers
 
