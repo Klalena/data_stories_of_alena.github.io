@@ -2,7 +2,7 @@
 layout: post
 title: The Euler Project
 subtitle: Problems 4, 35, and 112
-cover-img: /assets/img/euler.jpg: "Euler's Identity" by derekbruff is licensed under CC BY-NC 2.0
+cover-img: /assets/img/euler.jpg
 thumbnail-img: /assets/img/code.jpg
 tags: [Project Euler]
 ---
