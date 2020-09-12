@@ -2,9 +2,10 @@
 layout: post
 title: The Euler Project
 subtitle: Problems 4, 35, and 112
-#cover-img: /assets/img/cover_pic_website.jpg
+cover-img: /assets/img/euler.jpg
+fig-caption: "Euler's Identity" by derekbruff is licensed under CC BY-NC 2.0
 thumbnail-img: /assets/img/code.jpg
-tags: [Euler]
+tags: [Project Euler]
 ---
 
 In this post, I will explain how I solved three problems from [Project Euler](https://projecteuler.net/) using Python. Project Euler is a website that publishes computational problems, which often solved with computer programs.  The three problems I chose have a different level of difficulty as listed below: 
