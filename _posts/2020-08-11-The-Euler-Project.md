@@ -7,7 +7,7 @@ thumbnail-img: /assets/img/code.jpg
 tags: [Euler]
 ---
 
-In this post I will explain how I solved three problems from the [Project Euler](https://projecteuler.net/) using Python. Project Euler is  a website publishing computational problems that are solved with computer programs.  The three problems I chose have different level of difficulty as listed below: 
+In this post, I will explain how I solved three problems from [Project Euler](https://projecteuler.net/) using Python. Project Euler is a website that publishes computational problems, which often solved with computer programs.  The three problems I chose have a different level of difficulty as listed below: 
 
 1. Problem 4: *Largest palindrome product* (Solved by < 500,000 people)
 2. Problem 35: *Circular primes* ( Solved by < 100,000 people)
@@ -15,7 +15,7 @@ In this post I will explain how I solved three problems from the [Project Euler]
 
 # #4: Largest palindrome product
 
-*Palindrome* is the number/word/phrase that can be read the same backward as forward. For example, 303  and 7557 are  palindromes. 
+*A palindrome* is the number/word/phrase that can be read the same backward as forward. For example, 303  and 7557 are  palindromes. 
 
 **Question**: Find the largest palindrome made from the product of two 3-digit numbers. 
 
@@ -37,7 +37,7 @@ def IsPalindrome(number):
     return palindrome
 ```
 
-Next, I used nested for loop to get a product of two 3-digit numbers and checked whether it is a palindrome. If the product is a palindrome, it is added to the list of palindromes and the largest palindrome is printed. 
+Next, I used nested for loop to get a product of two 3-digit numbers and checked whether it is a palindrome. If the product is a palindrome, it is added to the list of palindromes,  and the largest palindrome is printed. 
 
 ```python
 import numpy as np 
@@ -61,15 +61,13 @@ def main():
 
 #  #35: Circular primes
 
-*Circular prime* is a prime number for which the rotations of its digits are also prime numbers. For example, 199 is a circular number because 919 and 991 are also prime numbers. There are 13 circular numbers below 100: 
-
- `2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97`
+*A circular prime* is a prime number for which the rotations of its digits are also prime numbers. For example, 199 is a circular number because 919 and 991 are also prime numbers. 
 
 **Question**: How many circular primes are there below one million?
 
 ### Approach 
 
-I started by creating a function to check whether the number is circular. This function inputs a prime number and checks whether all its rotations are also prime numbers, in which case it returns  `True` and `False` otherwise. I used `sympy.isprime()` method (`sympy` module) to check if the number is a prime  and list-like container `deque` ( `collections` library) to rotate the number. 
+I started by creating a function to check whether the number is circular. This function inputs a prime number and checks whether all its rotations are also prime numbers, in which case it returns  `True` and `False` otherwise. I used `sympy.isprime()` method (from`sympy` module) to check if the number is a prime  and list-like container `deque` ( `collections` library) to rotate the number. 
 
 ```python
 import sympy
@@ -96,7 +94,7 @@ def IsCircular(prime):
     return circular
 ```
 
-Instead of using `sympy.isprime` method, you can also create your own function the checks if the number is a prime. Here is a simple example for the `IsPrime` function. I would not recommend to use it because it can  slow down your program, which is why I decided to use `sympy` method for that. 
+Instead of using `sympy.isprime` method, you can also create your own function the checks if the number is a prime. Below is a simple example of the `IsPrime` function. I would not recommend using it because it can slow down the program, which is why used `sympy` method.
 
 ```python
 def IsPrime(number):
@@ -107,14 +105,12 @@ def IsPrime(number):
      return prime
 ```
 
-Then, I iterated through the numbers from 100 to 100000, checking whether a number is a circular prime number. If the number is a circular prime, it's appended to the list of circular primes below 100. The main function prints out the  number of circular primes below one million and the list of these primes
+Then, I iterated through the numbers from 2 to 100000, checking whether a number is a circular prime number. If the number is a circular prime, it's appended to the list of `primes`. Lastly, the main function prints out the  number of circular primes below one million and the list of these primes.
 
 ```python
 def main():
-  
     """This program prints the number of circular primes below one million 
     and the list of these primes."""
-    
     primes = []
     for i in range(2,1000000):
         if sympy.isprime(i) and IsCircular(i): 
@@ -129,9 +125,11 @@ def main():
 
 `[2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97, 113, 131, 197, 199, 311, 337, 373, 719, 733, 919, 971, 991, 1193, 1931, 3119, 3779, 7793, 7937, 9311, 9377, 11939, 19391, 19937, 37199, 39119, 71993, 91193, 93719, 93911, 99371, 193939, 199933, 319993, 331999, 391939, 393919, 919393, 933199, 939193, 939391, 993319, 999331]`
 
+Not so many...
+
 # #112: Bouncy numbers
 
-*Bouncy number* is a positive number that neither increasing nor decreasing (such as 12653). The definitions of increasing and decreasing number are presented in the description of this problem as follows: 
+*A bouncy number* is a positive number that neither increasing nor decreasing (such as 12653). The definitions of increasing and decreasing number are presented in the description of this problem as follows: 
 
 " Working from left-to-right if no digit is exceeded by the digit to its left it is called an increasing number; for example, 134468.
 
@@ -141,11 +139,10 @@ Similarly if no digit is exceeded by the digit to its right it is called a decre
 
 ### Approach 
 
-I began by defining the functions to check whether the number is increasing, decreasing,  and bouncy. `IsIncreasing` and `IsDecreasing` functions input a number, check  whether the above-noted conditions are met, in which case the functions return `True` and `False` otherwise. 
+I began by defining the functions to check whether the number is increasing, decreasing,  and bouncy. `IsIncreasing` and `IsDecreasing` functions input a number and check  whether the above-noted conditions are met, in which case the functions return `True` and `False` otherwise. 
 
 ```python
 def IsIncreasing(num):
-  
     """
     Input: number
     Output: Boolean -- True when the number is increasing
@@ -157,9 +154,7 @@ def IsIncreasing(num):
             increasing = False 
     return increasing
  
-
 def IsDecreasing(num):
-  
     """
     Input: number
     Output: Boolean -- True when the number is decreasing
@@ -179,14 +174,14 @@ def IsBouncy(num):
     """
     Input: number
     Output: Boolean -- True when the number is bouncy
-        """
+    """
     bouncy = True 
     if IsIncreasing(num) or IsDecreasing(num):
         bouncy = False
     return bouncy 
 ```
 
-Having all the functions needed to solve this problem, it's time to write the program! Since there are no bouncy numbers below 100, the while loop that checks whether the number is bouncy or not starts from `100`. If the number is bouncy, it's get added to the list `bouncy_n` that keep tracks of bouncy number. While loop breaks when the proportion of bouncy numbers reaches 99%. Following the loop, main function prints the least number when the proportion first reaches 99%. 
+Having all the functions needed to solve this problem, it's time to write the program! I used a while loop to checks whether the number is bouncy or not, starting from 100 because there are no bouncy numbers below 100. Consequently, if the number is bouncy, it's get added to the list `bouncy_n` that keeps tracks of the bouncy number. While loop breaks when the proportion of bouncy numbers reaches 99%. Finally, following the loop, the `main` function prints the least number when the proportion first reaches 99%. 
 
 ```python
 def main():
