@@ -21,7 +21,7 @@ In this post I will explain how I solved three problems from the [Project Euler]
 
 ###  Approach 
 
-First, I created a function to check whether the number is palindrome or not. The function takes a  number and checks whether this number is equivalent to the reversed number, in which case the functions returns `True`  and `False`  otherwise. 
+First, I created a function to check whether the number is palindrome or not. The function takes a  number and checks whether it is equivalent to the reversed number, in which case the function returns `True`  and `False`  otherwise. 
 
 ```python
 def IsPalindrome(number):
@@ -115,8 +115,8 @@ def main():
     """This program prints the number of circular primes below one million 
     and the list of these primes."""
     
-    primes = [2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97]
-    for i in range(100,1000000):
+    primes = []
+    for i in range(2,1000000):
         if sympy.isprime(i) and IsCircular(i): 
             primes.append(i)
     print(f'The number of circular primes below one million is {len(primes)}. ')
@@ -175,18 +175,39 @@ def IsDecreasing(num):
 `IsBouncy` function returns `True` if the number is neither increasing nor decreasing and `False` otherwise. 
 
 ```python
-def IsIncreasing(num):
-  
+def IsBouncy(num):
     """
     Input: number
-    Output: Boolean -- True when the number is increasing
-    """
-    
-    num = str(num)
-    increasing = True 
-    for i in range(len(num)-1):
-        if int(num[i]) > int(num[i +1]):
-            increasing = False 
-    return increasing
+    Output: Boolean -- True when the number is bouncy
+        """
+    bouncy = True 
+    if IsIncreasing(num) or IsDecreasing(num):
+        bouncy = False
+    return bouncy 
 ```
+
+Having all the functions needed to solve this problem, it's time to write the program! Since there are no bouncy numbers below 100, the while loop that checks whether the number is bouncy or not starts from `100`. If the number is bouncy, it's get added to the list `bouncy_n` that keep tracks of bouncy number. While loop breaks when the proportion of bouncy numbers reaches 99%. Following the loop, main function prints the least number when the proportion first reaches 99%. 
+
+```python
+def main():
+    """
+    The function prints the least number for which the proportion of bouncy numbers is 0.99,
+    where bouncy numbers are neither increasing nor decreasing numbers such as 155349.
+
+    """
+    number = 99
+    bouncy_n  = 0
+    while True:
+        number += 1
+        if IsBouncy(number):
+            bouncy_n += 1
+            proportion = (bouncy_n / number)
+            if proportion == 0.99:
+                print(f'The least number when the proportion of bouncy numbers is 99% is {number:,}')
+                break
+```
+
+**Solution**: `The least number when the proportion of bouncy numbers is 99% is 1,587,000 `
+
+##### Reference: https://projecteuler.net/archives
 
