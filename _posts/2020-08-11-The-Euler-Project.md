@@ -57,19 +57,19 @@ def main():
     
 ```
 
-** Solution**: `The largest palindrome made from the product of two 3-digit numbers is 906,609.`
+**Solution**: `The largest palindrome made from the product of two 3-digit numbers is 906,609.`
 
-# #35: Circular primes
+#  #35: Circular primes
 
 *Circular prime* is a prime number for which the rotations of its digits are also prime numbers. For example, 199 is a circular number because 919 and 991 are also prime numbers. There are 13 circular numbers below 100: 
 
- 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97`
+ `2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97`
 
 **Question**: How many circular primes are there below one million?
 
 ### Approach 
 
-I started by creating a function to check whether the number is circular. This function inputs a prime number and checks whether all its rotations are also prime numbers, in which case it returns  `True` and `False` otherwise. I used `sympy.isprime()` method (``sympy` module) to check if the number is a prime  and list-like container `deque` ( `collections` library) to rotate the number. 
+I started by creating a function to check whether the number is circular. This function inputs a prime number and checks whether all its rotations are also prime numbers, in which case it returns  `True` and `False` otherwise. I used `sympy.isprime()` method (`sympy` module) to check if the number is a prime  and list-like container `deque` ( `collections` library) to rotate the number. 
 
 ```python
 import sympy
@@ -125,9 +125,68 @@ def main():
 
 
 
-** Solution**: `The number of circular primes below one million is 55. `
+**Solution**: `The number of circular primes below one million is 55. `
 
 `[2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, 97, 113, 131, 197, 199, 311, 337, 373, 719, 733, 919, 971, 991, 1193, 1931, 3119, 3779, 7793, 7937, 9311, 9377, 11939, 19391, 19937, 37199, 39119, 71993, 91193, 93719, 93911, 99371, 193939, 199933, 319993, 331999, 391939, 393919, 919393, 933199, 939193, 939391, 993319, 999331]`
 
 # #112: Bouncy numbers
+
+*Bouncy number* is a positive number that neither increasing nor decreasing (such as 12653). The definitions of increasing and decreasing number are presented in the description of this problem as follows: 
+
+" Working from left-to-right if no digit is exceeded by the digit to its left it is called an increasing number; for example, 134468.
+
+Similarly if no digit is exceeded by the digit to its right it is called a decreasing number; for example, 66420."
+
+**Question**: Find the least number for which the proportion of bouncy numbers is exactly 99%.
+
+### Approach 
+
+I began by defining the functions to check whether the number is increasing, decreasing,  and bouncy. `IsIncreasing` and `IsDecreasing` functions input a number, check  whether the above-noted conditions are met, in which case the functions return `True` and `False` otherwise. 
+
+```python
+def IsIncreasing(num):
+  
+    """
+    Input: number
+    Output: Boolean -- True when the number is increasing
+    """
+    num = str(num)
+    increasing = True 
+    for i in range(len(num)-1):
+        if int(num[i]) > int(num[i +1]):
+            increasing = False 
+    return increasing
+ 
+
+def IsDecreasing(num):
+  
+    """
+    Input: number
+    Output: Boolean -- True when the number is decreasing
+    """
+    num = str(num)
+    decreasing = True
+    for i in range(len(num)-1):
+        if int(num[i]) < int(num[i +1]):
+            decreasing = False 
+    return decreasing
+```
+
+`IsBouncy` function returns `True` if the number is neither increasing nor decreasing and `False` otherwise. 
+
+```python
+def IsIncreasing(num):
+  
+    """
+    Input: number
+    Output: Boolean -- True when the number is increasing
+    """
+    
+    num = str(num)
+    increasing = True 
+    for i in range(len(num)-1):
+        if int(num[i]) > int(num[i +1]):
+            increasing = False 
+    return increasing
+```
 
