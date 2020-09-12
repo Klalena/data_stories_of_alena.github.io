@@ -67,7 +67,7 @@ def main():
 
 ### Approach 
 
-I started by creating a function to check whether the number is circular. This function inputs a prime number and checks whether all its rotations are also prime numbers, in which case it returns  `True` and `False` otherwise. I used `sympy.isprime()` method (from`sympy` module) to check if the number is a prime  and list-like container `deque` ( `collections` library) to rotate the number. 
+I started by creating a function to check whether the number is circular. This function takes a number and checks whether all its rotations are also prime numbers, in which case it returns  `True` and `False` otherwise. I used `sympy.isprime()` method (from`sympy` module) to check if the number is a prime  and list-like container `deque` ( `collections` library) to rotate the number. 
 
 ```python
 import sympy
@@ -94,7 +94,7 @@ def IsCircular(prime):
     return circular
 ```
 
-Instead of using `sympy.isprime` method, you can also create your own function the checks if the number is a prime. Below is a simple example of the `IsPrime` function. I would not recommend using it because it can slow down the program, which is why used `sympy` method.
+Instead of using `sympy.isprime` method, you can also create your own function that checks if the number is a prime. Below is a simple example of the `IsPrime` function. I would not recommend using it because it can slow down the program, which is why used `sympy` method.
 
 ```python
 def IsPrime(number):
@@ -105,7 +105,7 @@ def IsPrime(number):
      return prime
 ```
 
-Then, I iterated through the numbers from 2 to 100000, checking whether a number is a circular prime number. If the number is a circular prime, it's appended to the list of `primes`. Lastly, the main function prints out the  number of circular primes below one million and the list of these primes.
+Then, I iterated through the numbers from 2 to 1 000 000, checking whether a number is a circular prime number. If the number is a circular prime, it's appended to the list of `primes`. Lastly, the main function prints out the  number of circular primes below one million and the list of these primes.
 
 ```python
 def main():
@@ -181,7 +181,7 @@ def IsBouncy(num):
     return bouncy 
 ```
 
-Having all the functions needed to solve this problem, it's time to write the program! I used a while loop to checks whether the number is bouncy or not, starting from 100 because there are no bouncy numbers below 100. Consequently, if the number is bouncy, it's get added to the list `bouncy_n` that keeps tracks of the bouncy number. While loop breaks when the proportion of bouncy numbers reaches 99%. Finally, following the loop, the `main` function prints the least number when the proportion first reaches 99%. 
+Having all the functions needed to solve this problem, it's time to write the program! I used a while loop to checks whether the number is bouncy or not, starting from 100 because there are no bouncy numbers below 100. Consequently, if the number is bouncy, it gets added to the list `bouncy_n` that keeps tracks of the bouncy number. While loop breaks when the proportion of bouncy numbers reaches 99%. Finally, following the loop, the `main` function prints the least number when the proportion first reaches 99%. 
 
 ```python
 def main():
@@ -204,5 +204,5 @@ def main():
 
 **Solution**: `The least number when the proportion of bouncy numbers is 99% is 1,587,000 `
 
-##### Reference: https://projecteuler.net/archives
+Reference: https://projecteuler.net/archives
 
