@@ -2,11 +2,16 @@
 layout: post
 title: The Euler Project
 subtitle: Problems 4, 35, and 112
-cover-img: /assets/img/euler.jpg
 thumbnail-img: /assets/img/code.jpg
 tags: [Project Euler]
 ---
+<figure>
+  <img style="float:left; margin-right: 20px;" src="/assets/img/euler_img.jpg" > 
+  <figcaption>"Leonhard Euler" by John Baichtal is licensed under CC BY-NC-SA 2.0.</figcaption>
+</figure>
 
+
+{% include image.html file="image-name.jpg" description="This is an image." %}
 In this post, I will explain how I solved three problems from [Project Euler](https://projecteuler.net/) using Python. Project Euler is a website that publishes computational problems, which often solved with computer programs.  The three problems I chose have a different level of difficulty as listed below: 
 
 1. Problem 4: *Largest palindrome product* (Solved by < 500,000 people)
