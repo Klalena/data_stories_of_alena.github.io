@@ -2,8 +2,8 @@
 layout: post
 title: Trends of Malaria Incidents Worldwide 
 subtitle: With Interactive Visualizations 
-cover-img: /assets/img/mosquito_BW.jpg 
-thumbnail-img: /assets/img/malaria.jpg
+cover-img: /assets/img/malaria/mosquito_BW.jpg 
+thumbnail-img: /assets/img/malaria/malaria.jpg
 tags: [Malaria, Interactive Visualizations, Plotly, Bokeh]
 
 ---
@@ -16,7 +16,23 @@ Malaria is a disease caused by *Plasmodium* parasites, which is mostly transmitt
 
 
 
-## 📊 Malaria Cases Worldwide 
+## 📊 Malaria Cases Worldwide in 2000 vs 2015 
+
+
+
+### 2010 
+
+![Malaria cases in 2010](../assets/img/malaria/malaria_cases_2010.gif)
+
+
+
+
+
+### 2015 
+
+![Malaria cases in 2015](../assets/img/malaria/malaria_cases_2015.gif)
+
+Nigeria (25%), the Democratic Republic of the Congo (12%), Uganda (5%), and Côte d’Ivoire, Mozambique and Niger (4% each).
 
 ### Low-Income Countries More Than Halved the Malaria Cases from 2000 to 2015
 
