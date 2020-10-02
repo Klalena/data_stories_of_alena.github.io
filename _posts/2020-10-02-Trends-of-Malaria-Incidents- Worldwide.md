@@ -2,9 +2,9 @@
 layout: post
 title: Trends of Malaria Incidents Worldwide 
 subtitle: With Interactive Visualizations 
-cover-img: /assets/img/malaria.jpg
-thumbnail-img: /assets/img/mosquito-1016254_1280.png
-tags: [website, GitHub]
+cover-img: /assets/img/mosquito-1016254_1280.jng 
+thumbnail-img: /assets/img/malaria.jpg
+tags: [Malaria, Interactive Visualizations, Plotly, Bokeh]
 
 ---
 
