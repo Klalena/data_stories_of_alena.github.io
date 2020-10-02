@@ -1,10 +1,10 @@
 # --- Required options --- #
 
 # Name of website
-title: Data Stories 
+title: Data Stories
 
 # Your name to show in the footer
-author: Alena Kalodzitsa 
+author: Alena Kalodzitsa
 
 # --- List of links in the navigation bar --- #
 
@@ -13,6 +13,7 @@ navbar-links:
   Portfolio:
     - How To Make Personal Website Fast and Easy: "https://klalena.github.io/2020-08-28-How-to-Make-Personal-Website-Fast-and-Easy/"
     - The Euler Project (problems 4, 35, and 112): "https://klalena.github.io/2020-08-11-The-Euler-Project/"
+    - Trends of Malaria Incidents Worldwide : "https://klalena.github.io/2020-10-02-Trends-of-Malaria-Incidents-Worldwide/"
   LinkedIn: "https://www.linkedin.com/in/alenakalodzitsa/"
 
 # --- Logo --- #
@@ -229,7 +230,7 @@ prose:
     - /css
     - /img
     - /js
-  
+
   metadata:
     _posts:
       - name: "layout"
@@ -267,7 +268,7 @@ prose:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
-          
+
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
