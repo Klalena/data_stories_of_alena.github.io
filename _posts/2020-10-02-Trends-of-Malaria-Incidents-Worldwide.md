@@ -20,7 +20,9 @@ Malaria is a disease caused by *Plasmodium* parasites, which is mostly transmitt
 
 
 
-### 2010 
+The maps below show the countries with malaria cases in 2000 and 2015. The darker the color of the country, the more malaria incidents it had, where the darkest color indicates countries with more than 600 cases per 1000 population at risk. As can be vividly seen from the maps, the 2000 map is considerably darker than the 2015 map, particularly the African region.													
+
+### 2000 
 
 ![Malaria cases in 2010](../assets/img/malaria/malaria_cases_2010.gif)
 
@@ -31,6 +33,19 @@ Malaria is a disease caused by *Plasmodium* parasites, which is mostly transmitt
 ### 2015 
 
 ![Malaria cases in 2015](../assets/img/malaria/malaria_cases_2015.gif)
+
+
+
+For example, the table below shows a sizable reduction in the number of cases of the top 3 countries (in the number of cases) during 15 years. 
+
+|   Country    | Cases in 2000 | Cases in 2015 |
+| :----------: | :-----------: | :------------ |
+|    Turkey    |     1741      | 0             |
+|   Ethiopia   |      662      | 59            |
+| Burkina Faso |      621      | 389           |
+|              |               |               |
+
+
 
 Nigeria (25%), the Democratic Republic of the Congo (12%), Uganda (5%), and Côte d’Ivoire, Mozambique and Niger (4% each).
 
