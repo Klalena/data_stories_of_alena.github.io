@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Trends of Malaria Incidents Worldwide 
+title: Trends of Malaria Cases Worldwide 
 subtitle: With Interactive Visualizations 
 cover-img: /assets/img/malaria/mosquito_BW.jpg 
 thumbnail-img: /assets/img/malaria/malaria.jpg
@@ -34,7 +34,7 @@ The maps below show the countries with malaria cases in 2000 and 2015. The darke
 
 
 
-For example, the table below shows a sizable reduction in the number of cases of the top 3 countries (in the number of cases) during 15 years. 
+For example, the table below shows a sizable reduction in the number of cases of the top 3 countries (in the number of cases) through time. 
 
 |   Country    | Cases in 2000 | Cases in 2015 |
 | :----------: | :-----------: | :------------ |
@@ -46,7 +46,7 @@ For example, the table below shows a sizable reduction in the number of cases of
 
 - I used `pandas_bokeh` to create the maps. You can find the code here. 
 
-- To create gif file to show the interactivity of the maps, I used [Giphy](https://giphy.com/). 
+- To create a `gif` file to show the interactivity of the maps, I used [Giphy](https://giphy.com/). 
 
   
 
@@ -54,13 +54,15 @@ For example, the table below shows a sizable reduction in the number of cases of
 
 
 
-However, 
-
-- 
+From the maps above, we saw that Malaria cases reduced greatly; however, what region experienced the highest drop in cases in the 15-year period 2000-2015? Looking at the graph below we can see that relative to the world and other regions, Sub-Saharan Africa had a sharp reduction in malaria cases. I can be partially explained by the reasons noted above such as state and non-profit initiative aiming to eliminate malaria. 
 
 <iframe width="770" height="431" frameborder="0" scrolling="no" src="//plotly.com/~alena3/4.embed"></iframe>
 
+👩‍💻 Tips: 
 
+- These are interactive visualization, where you can hover over a specific region to learn more about that data point. To see one or a few particular groups  with a rescaled y-axis, you can unselect unnecessary groups. You can explore many more options in the top right corner of the graph. 
+- To create these visualizations, I used `plotly` backend (`pd.options.plotting.backend = "plotly"`)
+- Wondering how I embedded `plotly` graphs on my website 🤔? Check out this [video](https://www.youtube.com/watch?v=kxPZV9ileKI). 
 
 ## 3️⃣ Low-Income Countries More Than Halved the Malaria Cases from 2000 to 2015
 
@@ -74,6 +76,10 @@ However,
 -- 
 
 <iframe width="770" height="431" frameborder="0" scrolling="no" src="//plotly.com/~alena3/1.embed"></iframe>
+
+
+
+
 
 **References:** https://www.who.int/news-room/fact-sheets/detail/malaria
 
