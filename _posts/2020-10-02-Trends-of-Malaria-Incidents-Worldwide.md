@@ -46,7 +46,7 @@ For example, the table below shows a sizable reduction in the number of cases of
 
 - I used `pandas_bokeh` to create the maps. You can find the code here. 
 
-- To create gif file to show the interactivity of the maps, I used [Giphy](https://giphy.com/)
+- To create gif file to show the interactivity of the maps, I used [Giphy](https://giphy.com/). 
 
   
 
@@ -58,7 +58,7 @@ However,
 
 - 
 
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/4.embed"></iframe>
+<iframe width="770" height="431" frameborder="0" scrolling="no" src="//plotly.com/~alena3/4.embed"></iframe>
 
 
 
@@ -67,13 +67,13 @@ However,
 - 
 - 
 
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/9.embed"></iframe>
+<iframe width="770" height="431" frameborder="0" scrolling="no" src="//plotly.com/~alena3/9.embed"></iframe>
 
 ## 3️⃣ Sharp Decrease in Average Number of Deaths From Malaria for Children Under 5
 
 -- 
 
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/1.embed"></iframe>
+<iframe width="770" height="431" frameborder="0" scrolling="no" src="//plotly.com/~alena3/1.embed"></iframe>
 
 **References:** https://www.who.int/news-room/fact-sheets/detail/malaria
 
