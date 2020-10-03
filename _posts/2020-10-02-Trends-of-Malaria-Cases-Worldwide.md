@@ -12,7 +12,7 @@ In this post, I will explore a few  trends of Malaria worldwide from 2010 to 201
 
 ## About [Malaria](https://www.who.int/news-room/fact-sheets/detail/malaria)
 
-Malaria is a disease caused by *Plasmodium* parasites, which is mostly transmitted  by mosquitoes (infected female *Anopheles* mosquitoes). Even though malaria is a curable and preventable disease,  it can be fatal when not diagnosed early and treated properly. The distribution  of malaria cases and deaths vary greatly among geographic regions and age groups.  The majority of cases and deaths are in the African region ([> 93% as of 2018]((https://www.who.int/news-room/fact-sheets/detail/malaria))), and children under 5 years old are the most susceptible age group to contract and die from malaria. According to the World Health Organization (WHO), in 2018 alone, there were more than *200 million* malaria cases and  more than *400 thousand* deaths worldwide. Although these numbers are alarming, they are significantly lower than they were a decade ago, which mainly can be attributed to the WHO Malaria Elimination initiative, rigorous nationwide  policies on malaria treatment and prevention, and the vaccine against malaria. 
+Malaria is a disease caused by *Plasmodium* parasites, which is mostly transmitted  by mosquitoes (infected female *Anopheles* mosquitoes). Even though malaria is a curable and preventable disease,  it can be fatal when not diagnosed early and treated properly. The distribution  of malaria cases and deaths vary greatly among geographic regions and age groups.  The majority of cases and deaths are in the African region ([> 93% as of 2018](https://www.who.int/news-room/fact-sheets/detail/malaria)), and children under 5 years old are the most susceptible age group to contract and die from malaria. According to the World Health Organization (WHO), in 2018 alone, there were more than *200 million* malaria cases and  more than *400 thousand* deaths worldwide. Although these numbers are alarming, they are significantly lower than they were a decade ago, which mainly can be attributed to the WHO Malaria Elimination initiative, rigorous nationwide  policies on malaria treatment and prevention, and the vaccine against malaria. 
 
 
 
@@ -36,11 +36,11 @@ The maps below show the countries with malaria cases in 2000 and 2015. The darke
 
 For example, the table below shows a sizable reduction in the number of cases of the top 3 countries (in the number of cases) through time. 
 
-|   Country    | Cases in 2000 | Cases in 2015 |
-| :----------: | :-----------: | :------------ |
-|    Turkey    |     1741      | 0             |
-|   Ethiopia   |      662      | 59            |
-| Burkina Faso |      621      | 389           |
+|    Country    | Cases in 2000 | Cases in 2015 |
+| :-----------: | :-----------: | :------------ |
+|   Ethiopia    |      662      | 59            |
+| Burkina Faso  |      621      | 389           |
+| Cote d'Ivoire |      525      | 349           |
 
 👩‍💻 Tips: 
 
@@ -82,7 +82,9 @@ Looking at the countries grouped by income, we can see that the world and three 
 
 
 
-## 3️⃣ Sharp Decrease in Average Number of Deaths From Malaria for Children Under 5
+
+
+## 4️⃣ Sharp Decrease in Average Number of Deaths From Malaria for Children Under 5
 
 As mentioned earlier, children under 5 years old are the most vulnerable group to contract malaria and die from it. However, as can be seen from the graph below, there was a promising reduction in the number of deaths since 2003. 
 
@@ -94,7 +96,9 @@ Despite a significant improvement in the reduction of malaria cases and deaths, 
 
 
 
-**References:** https://www.who.int/news-room/fact-sheets/detail/malaria
+**References:** 
+
+[WHO](https://www.who.int/news-room/fact-sheets/detail/malaria)
 
 
 
