@@ -86,7 +86,7 @@ Looking at the countries grouped by income, we can see that the world and three 
 
 ## 4️⃣ Sharp Decrease in Average Number of Deaths From Malaria for Children Under 5
 
-As mentioned earlier, children under 5 years old are the most vulnerable group to contract malaria and die from it. However, as can be seen from the graph below, there was a promising reduction in the number of deaths since 2003. 
+As mentioned earlier, children under 5 years old are the most vulnerable group to contract malaria and die from it. However, as can be seen from the graph below, there was a promising reduction in the average number of deaths for children under 5 since 2003. 
 
 <iframe width="770" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/1.embed"></iframe>
 
