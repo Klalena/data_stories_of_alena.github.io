@@ -16,7 +16,7 @@ Malaria is a disease caused by *Plasmodium* parasites, which is mostly transmitt
 
 
 
-## 📊 Malaria Cases Worldwide in 2000 vs 2015 
+## 1️⃣ Malaria Cases Worldwide Reduced Substantially from 2000 to 2015 
 
 
 
@@ -24,9 +24,7 @@ The maps below show the countries with malaria cases in 2000 and 2015. The darke
 
 ### 2000 
 
-![Malaria cases in 2010](../assets/img/malaria/malaria_cases_2010.gif)
-
-
+![Malaria cases in 2000](../assets/img/malaria/malaria_cases_2000.gif)
 
 
 
@@ -43,23 +41,39 @@ For example, the table below shows a sizable reduction in the number of cases of
 |    Turkey    |     1741      | 0             |
 |   Ethiopia   |      662      | 59            |
 | Burkina Faso |      621      | 389           |
-|              |               |               |
+
+👩‍💻 Tips: 
+
+- I used `pandas_bokeh` to create the maps. You can find the code here. 
+
+- To create gif file to show the interactivity of the maps, I used [Giphy](https://giphy.com/)
+
+  
+
+## 2️⃣ Number of Malaria Incidences Almost Halved in Sub-Saharan Africa 
 
 
 
-Nigeria (25%), the Democratic Republic of the Congo (12%), Uganda (5%), and Côte d’Ivoire, Mozambique and Niger (4% each).
+However, 
 
-### Low-Income Countries More Than Halved the Malaria Cases from 2000 to 2015
+- 
+
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/4.embed"></iframe>
+
+
+
+## 3️⃣ Low-Income Countries More Than Halved the Malaria Cases from 2000 to 2015
+
+- 
+- 
 
 <iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/9.embed"></iframe>
 
-### Sharp Decrease in Average Number of Deaths From Malaria for Children Under 5
+## 3️⃣ Sharp Decrease in Average Number of Deaths From Malaria for Children Under 5
+
+-- 
 
 <iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/1.embed"></iframe>
-
-### Number of Malaria Incidences Almost Halved in Sub-Saharan Africa from 2000 to 2015
-
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~alena3/4.embed"></iframe>
 
 **References:** https://www.who.int/news-room/fact-sheets/detail/malaria
 
