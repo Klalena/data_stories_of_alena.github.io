@@ -44,7 +44,7 @@ For example, the table below shows a sizable reduction in the number of cases of
 
 👩‍💻 Tips: 
 
-- I used `pandas_bokeh` to create the maps. You can find the code here. 
+- I used `pandas_bokeh` to create the maps. You can find the code [here](https://github.com/Klalena/BIOS823-Statistical_Programming-for-Big-Data/blob/master/Homework/Malaria_visualizations.ipynb). 
 
 - To create a `gif` file to show the interactivity of the maps, I used [Giphy](https://giphy.com/). 
 
