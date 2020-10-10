@@ -197,7 +197,7 @@ Hmmm, 70's Hard Rock 🎸... What are some of the instrumental songs in that pla
 
 ```python
 c.execute("""
-SELECT playlist_name, track_name,instrumentalness
+SELECT playlist_name, track_name,track_artist, instrumentalness
 FROM track AS t 
 LEFT JOIN track_name as tn
     ON t.track_id = tn.track_id
@@ -209,19 +209,21 @@ WHERE playlist_name LIKE '70s Hard Rock'
 ORDER BY instrumentalness DESC
 LIMIT 7
 """)
-hardrock = pd.DataFrame(c.fetchall(), columns = ['Playlist Name', 'Track', 'Instrumentalness'])
+hardrock = pd.DataFrame(c.fetchall(), columns = ['Playlist Name', 'Track', 'Track Artist','Instrumentalness'])
 hardrock
 ```
 
-|      | Playlist Name |                                           Track | Instrumentalness |
-| ---: | ------------: | ----------------------------------------------: | ---------------: |
-|    0 | 70s Hard Rock |                                        Majestic |            0.923 |
-|    1 | 70s Hard Rock | Won't Get Fooled Again - Original Album Version |            0.867 |
-|    2 | 70s Hard Rock |                                        Parasite |            0.798 |
-|    3 | 70s Hard Rock |                                       Chinatown |            0.744 |
-|    4 | 70s Hard Rock |            Lights Out - 2008 Remastered Version |            0.731 |
-|    5 | 70s Hard Rock |                                    Heartbreaker |            0.707 |
-|    6 | 70s Hard Rock |                      Rockin' All Over The World |            0.491 |
 
-Indeed, several tracks score high in `instrumentalness`. For example, the Majestic song seems majestically instrumental!
+
+|      | Playlist Name |                                           Track | Track Artist | Instrumentalness |
+| ---: | ------------: | ----------------------------------------------: | -----------: | ---------------: |
+|    0 | 70s Hard Rock |                                        Majestic |      Journey |            0.923 |
+|    1 | 70s Hard Rock | Won't Get Fooled Again - Original Album Version |      The Who |            0.867 |
+|    2 | 70s Hard Rock |                                        Parasite |         KISS |            0.798 |
+|    3 | 70s Hard Rock |                                       Chinatown |   Thin Lizzy |            0.744 |
+|    4 | 70s Hard Rock |            Lights Out - 2008 Remastered Version |          UFO |            0.731 |
+|    5 | 70s Hard Rock |                                    Heartbreaker |         Free |            0.707 |
+|    6 | 70s Hard Rock |                      Rockin' All Over The World |   Status Quo |            0.491 |
+
+Indeed, several tracks score high in `instrumentalness`. For example, the [Majestic song](https://www.youtube.com/watch?v=lifsbJ35j8s) seems majestically instrumental without a word!
 
