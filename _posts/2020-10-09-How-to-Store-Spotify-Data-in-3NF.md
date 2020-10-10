@@ -9,7 +9,7 @@ tags: [Normalization, SQLite3, Spotify]
 
 ---
 
-This post will show how to store Spotify data in the Third Normal Form (3NF) using SQLite. Third Normal Form implies that it's already in 2NF and that there are no transitive relationships between non-prime attributes. In other words, 3NF means that one non-prime attribute cannot be inferred by another non-prime attribute. So, each attribute in the table depends only on the primary key. If you are unfamiliar with normalization, there are many good tutorials. Why not start with [this one](https://www.edureka.co/blog/normalization-in-sql/)?
+This post will show how to store Spotify data in the Third Normal Form (3NF) using SQLite. For a  database to be in 3NF, it needs to be in  2NF (with no partial dependence),  and there should not be any transitive relationships between non-prime attributes. In other words, 3NF means that one non-prime attribute cannot be inferred by another non-prime attribute. So, each attribute in the table depends only on the primary key. If you are unfamiliar with normalization, there are many good tutorials. Why not start with [this one](https://www.edureka.co/blog/normalization-in-sql/)?
 
 Why is it important that the data is stored in 3NF? It is common to store data in a relational database in 3NF because it minimizes unnecessary duplication of data, helps to avoid modification anomalies when inserting, deleting, or updating tuples, and simplifies queries. 
 
