@@ -49,9 +49,7 @@ As can be seen from the data above, there are a several themes (e.g., tracks, al
 
 Here is a simple ER diagram of the normalized SQLite database for Spotify data:
 
-<img style="float:left; margin-right: 20px;" src="/assets/img/spotify/spotify_er.png" > 
-
-
+<img align = "center" " src="/assets/img/spotify/spotify_er.png" > 
 
 ## Fom Pandas DataFrames to SQLite databases 
 
@@ -129,7 +127,101 @@ from eralchemy import render_er
 render_er('sqlite:///spotify.db', 'spotify_er.png', mode = 'graph')
 ```
 
-Now we are ready to run SQL queries! 
+Finally, we are ready to run SQL query on our normalized database!
 
 ## What are the names of playlists that contain instrumentals?
+
+First, let's see how many unique playlists there are that contain instrumental. 
+
+```python
+from pandas import DataFrame
+
+#connect to the database
+conn = sqlite3.connect('spotify.db')
+c = conn.cursor()
+
+#execute sql query 
+c.execute ("""
+SELECT COUNT(DISTINCT playlist_name)
+FROM playlist_name AS p 
+LEFT JOIN track_playlist AS tp
+    ON p.playlist_id = tp.playlist_id
+LEFT JOIN track AS t
+    ON tp.track_id = t.track_id
+WHERE t.instrumentalness > 0.5
+""")
+#fetch resultset and save it as DataFrame 
+DataFrame(c.fetchall())
+```
+
+|      |    0 |
+| ---: | ---: |
+|    0 |  256 |
+
+There are 256 unique playlist that contain instrumentals, where instrumental means that the song has no vocals and has above 0.5 value in `instrumentalness` column.
+
+Next, let's take a look at 10 playlist ordered in ascending order: 
+
+```python
+c.execute ("""
+SELECT DISTINCT playlist_name
+FROM playlist_name AS p 
+JOIN track_playlist AS tp
+    ON p.playlist_id = tp.playlist_id
+JOIN track AS t
+    ON tp.track_id = t.track_id
+WHERE t.instrumentalness > 0.5
+ORDER BY playlist_name 
+LIMIT 10
+""")
+
+playlists_inst = DataFrame(c.fetchall(), columns = ['Playlist Name'])
+playlists_inst
+```
+
+
+
+|      |                                 Playlist Name |
+| ---: | --------------------------------------------: |
+|    0 |                              "Permanent Wave" |
+|    1 |                                 10er Playlist |
+|    2 |                              2000's hard rock |
+|    3 |                               2011-2014 House |
+|    4 |                       2019 in Indie Poptimism |
+|    5 | 2020 Hits & 2019 Hits – Top Global Tracks 🔥🔥🔥 |
+|    6 |                            3rd Coast Classics |
+|    7 |                             70's Classic Rock |
+|    8 |                                 70s Hard Rock |
+
+Hmmm, 70's Hard Rock 🎸... What are some of the instrumental songs in that playlist?
+
+```python
+c.execute("""
+SELECT playlist_name, track_name,instrumentalness
+FROM track AS t 
+LEFT JOIN track_name as tn
+    ON t.track_id = tn.track_id
+LEFT JOIN track_playlist as tp
+    ON tp.track_id = t.track_id 
+LEFT JOIN playlist_name AS pn 
+    ON pn.playlist_id = tp.playlist_id
+WHERE playlist_name LIKE '70s Hard Rock'
+ORDER BY instrumentalness DESC
+LIMIT 7
+""")
+hardrock = pd.DataFrame(c.fetchall(), columns = ['Playlist Name', 'Track', 'Instrumentalness'])
+hardrock
+```
+
+|      | Playlist Name |                                           Track | Instrumentalness |
+| ---: | ------------: | ----------------------------------------------: | ---------------: |
+|    0 | 70s Hard Rock |                                        Majestic |            0.923 |
+|    1 | 70s Hard Rock | Won't Get Fooled Again - Original Album Version |            0.867 |
+|    2 | 70s Hard Rock |                                        Parasite |            0.798 |
+|    3 | 70s Hard Rock |                                       Chinatown |            0.744 |
+|    4 | 70s Hard Rock |            Lights Out - 2008 Remastered Version |            0.731 |
+|    5 | 70s Hard Rock |                                    Heartbreaker |            0.707 |
+|    6 | 70s Hard Rock |                      Rockin' All Over The World |            0.491 |
+
+Indeed, several tracks score high in `instrumentalness`. For example, the Majestic song seems majestically instrumental!
 
