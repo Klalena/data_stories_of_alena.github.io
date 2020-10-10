@@ -49,7 +49,9 @@ As can be seen from the data above, there are a several themes (e.g., tracks, al
 
 Here is a simple ER diagram of the normalized SQLite database for Spotify data:
 
-<img align = "center" " src="/assets/img/spotify/spotify_er.png" > 
+<p align="center">
+  <img  src="/assets/img/spotify/spotify_er.png">
+</p>
 
 ## Fom Pandas DataFrames to SQLite databases 
 
