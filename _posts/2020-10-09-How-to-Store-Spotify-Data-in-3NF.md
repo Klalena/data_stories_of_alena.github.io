@@ -39,18 +39,22 @@ Index(['track_id', 'track_name', 'track_artist', 'track_popularity',
       dtype='object')
 ```
 
-| track_id |             track_name |                                      track_artist | track_popularity | track_album_id |       track_album_name |                          track_album_release_date | playlist_name | playlist_id |         playlist_genre |  ... |  key | loudness |   mode | speechiness | acousticness | instrumentalness | liveness | valence | tempo | duration_ms |        |
-| -------: | ---------------------: | ------------------------------------------------: | ---------------: | -------------: | ---------------------: | ------------------------------------------------: | ------------: | ----------: | ---------------------: | ---: | ---: | -------: | -----: | ----------: | -----------: | ---------------: | -------: | ------: | ----: | ----------: | ------ |
-|        0 | 6f807x0ima9a1j3VPbc7VN | I Don't Care (with Justin Bieber) - Loud Luxur... |       Ed Sheeran |             66 | 2oCs0DGTsRO98Gh5ZSl2Cx | I Don't Care (with Justin Bieber) [Loud Luxury... |    2019-06-14 |   Pop Remix | 37i9dQZF1DXcZDD7cfEKhW |  pop |  ... |        6 | -2.634 |           1 |       0.0583 |           0.1020 | 0.000000 |  0.0653 | 0.518 |     122.036 | 194754 |
-|        1 | 0r7CVbZTWZgbTCYdfa2P31 |                   Memories - Dillon Francis Remix |         Maroon 5 |             67 | 63rPSO264uRjW1X5E6cWv6 |                   Memories (Dillon Francis Remix) |    2019-12-13 |   Pop Remix | 37i9dQZF1DXcZDD7cfEKhW |  pop |  ... |       11 | -4.969 |           1 |       0.0373 |           0.0724 | 0.004210 |  0.3570 | 0.693 |      99.972 | 162600 |
-|        2 | 1z1Hg7Vb0AhHDiEmnDE79l |                   All the Time - Don Diablo Remix |     Zara Larsson |             70 | 1HoSmj2eLcsrR0vE9gThr4 |                   All the Time (Don Diablo Remix) |    2019-07-05 |   Pop Remix | 37i9dQZF1DXcZDD7cfEKhW |  pop |  ... |        1 | -3.432 |           0 |       0.0742 |           0.0794 | 0.000023 |  0.1100 | 0.613 |     124.008 | 176616 |
+|      |               track_id |                                        track_name | track_artist | track_popularity |         track_album_id |                                  track_album_name | track_album_release_date |
+| ---: | ---------------------: | ------------------------------------------------: | -----------: | ---------------: | ---------------------: | ------------------------------------------------: | :----------------------- |
+|    0 | 6f807x0ima9a1j3VPbc7VN | I Don't Care (with Justin Bieber) - Loud Luxur... |   Ed Sheeran |               66 | 2oCs0DGTsRO98Gh5ZSl2Cx | I Don't Care (with Justin Bieber) [Loud Luxury... | 2019-06-14               |
+|    1 | 0r7CVbZTWZgbTCYdfa2P31 |                   Memories - Dillon Francis Remix |     Maroon 5 |               67 | 63rPSO264uRjW1X5E6cWv6 |                   Memories (Dillon Francis Remix) | 2019-12-13               |
+|    2 | 1z1Hg7Vb0AhHDiEmnDE79l |                   All the Time - Don Diablo Remix | Zara Larsson |               70 | 1HoSmj2eLcsrR0vE9gThr4 |                   All the Time (Don Diablo Remix) | 2019-07-05               |
 
-3 rows × 23 columns
+As can be seen from the data above, there are a several themes (e.g., tracks, albums, and playlists) and each of them can be saved in a separate table.  For the relational database to be in 3NF, each attribute in the table should depend only on primary key. Obviously, this is not true in the current state of Spotify data. After normalization, I ended up with 9 tables. 
 
-As can be seen from the data above, there are a several themes (e.g., tracks, albums, and playlists) and each of them can be saved in a separate table.  For the relational database to be in 3NF, each attribute in the table should depend only on primary key. Obviously, this is not true in the current state of Spotify data. 
+Here is a simple ER diagram of the normalized database:
 
-Here is  a Simple ER diagram of the normalized database:
+<center>![ER](/assets/img/spotify/spotify_er.png)</center>
 
-![ER](/assets/img/spotify/spotify_er.png)
+
+
+
+
+## Fom Pandas Dataframes to SQLite databases 
 
 
