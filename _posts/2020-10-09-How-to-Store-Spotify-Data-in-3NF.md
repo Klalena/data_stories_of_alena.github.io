@@ -49,9 +49,7 @@ As can be seen from the data above, there are a several themes (e.g., tracks, al
 
 Here is a simple ER diagram of the normalized database:
 
-<center>![ER](/assets/img/spotify/spotify_er.png)</center>
-
-
+<img style="float:left; margin-right: 20px;" src="/assets/img/spotify/spotify_er.png" > 
 
 
 
