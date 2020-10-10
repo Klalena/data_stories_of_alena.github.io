@@ -4,7 +4,6 @@ title: How to Store Spotify Data in 3NF
 subtitle: With SQLite3
 cover-img: /assets/img/spotify/spotify_thum.jpg
 image: /assets/img/spotify/spotify_thum.jpg
-full-width: true
 tags: [Normalization, SQLite3, Spotify]
 
 
@@ -47,4 +46,10 @@ Index(['track_id', 'track_name', 'track_artist', 'track_popularity',
 |        2 | 1z1Hg7Vb0AhHDiEmnDE79l |                   All the Time - Don Diablo Remix |     Zara Larsson |             70 | 1HoSmj2eLcsrR0vE9gThr4 |                   All the Time (Don Diablo Remix) |    2019-07-05 |   Pop Remix | 37i9dQZF1DXcZDD7cfEKhW |  pop |  ... |        1 | -3.432 |           0 |       0.0742 |           0.0794 | 0.000023 |  0.1100 | 0.613 |     124.008 | 176616 |
 
 3 rows × 23 columns
+
+As can be seen from the data above, there are a several themes (e.g., tracks, albums, and playlists) and each of them can be saved in a separate table.  For the relational database to be in 3NF, each attribute in the table should depend only on primary key. Obviously, this is not true in the current state of Spotify data. 
+
+Here is  a Simple ER diagram of the normalized database:
+
+! [ER](/assets/img/spotify/spotify_er.png) 
 
