@@ -11,9 +11,9 @@ tags: [Normalization, SQLite3, Spotify]
 
 This post will show how to store Spotify data in the Third Normal Form (3NF) using SQLite. Third Normal Form implies that it's already in 2NF and that there are no transitive relationships between non-prime attributes. In other words, 3NF means that one non-prime attribute cannot be inferred by another non-prime attribute. So, each attribute in the table depends only on the primary key. If you are unfamiliar with normalization, there are many good tutorials. Why not start with [this one](https://www.edureka.co/blog/normalization-in-sql/)?
 
-Why is it important that the data is stored in 3NF? It is common to store data in a relational database in 3NF because it minimizes unnecessary duplication of data, helps to avoid modification anomalies when inserting, deleting, or updating tuples, and simplify queries. 
+Why is it important that the data is stored in 3NF? It is common to store data in a relational database in 3NF because it minimizes unnecessary duplication of data, helps to avoid modification anomalies when inserting, deleting, or updating tuples, and simplifies queries. 
 
-## Normalization of Spotify data
+## Normalization of Spotify Data
 
 [Spotify data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21/readme.md) has 23 columns and it is already in the 1st Normal Form as can be seen from the sample of data below. 
 
@@ -45,7 +45,7 @@ Index(['track_id', 'track_name', 'track_artist', 'track_popularity',
 |    1 | 0r7CVbZTWZgbTCYdfa2P31 |                   Memories - Dillon Francis Remix |     Maroon 5 |               67 |
 |    2 | 1z1Hg7Vb0AhHDiEmnDE79l |                   All the Time - Don Diablo Remix | Zara Larsson |               70 |
 
-As can be seen from the data above, there are a several themes (e.g., tracks, albums, and playlists) and each of them can be saved in a separate table.  For the relational database to be in 3NF, each attribute in the table should depend only on primary key. Obviously, this is not true in the current state of Spotify data. After normalization, I ended up with 9 tables. For more details on how and why these tables were created, please see my code [here](https://github.com/Klalena/BIOS823-Statistical_Programming-for-Big-Data/blob/master/Homework/Spotify_DB_Normalization.ipynb).
+As can be seen from the data above, there are several themes (e.g., tracks, albums, and playlists), and each of them can be saved in several separate tables.  For the relational database to be in 3NF, each attribute in the table should depend only on the primary key. This is not true in the current state of Spotify data. After normalization, I ended up with 9 tables. For more details on how and why these tables were created, please see my code [here](https://github.com/Klalena/BIOS823-Statistical_Programming-for-Big-Data/blob/master/Homework/Spotify_DB_Normalization.ipynb).
 
 Here is a simple ER diagram of the normalized SQLite database for Spotify data:
 
@@ -53,9 +53,9 @@ Here is a simple ER diagram of the normalized SQLite database for Spotify data:
   <img  src="/assets/img/spotify/spotify_er.png">
 </p>
 
-## Fom Pandas DataFrames to SQLite databases 
+## Fom Pandas DataFrames to SQLite Database
 
-First, I saved the above noted tables as pandas DataFrames. For example, let's take a look how `album` table was created. 
+First, I saved the above-noted tables as pandas DataFrames. For example, let's take a look at how the`album` table was created. 
 
 ```python
 data = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv')
@@ -72,7 +72,7 @@ album.head(3)
 |    1 | 63rPSO264uRjW1X5E6cWv6 |               2019-12-13 |
 |    2 | 1HoSmj2eLcsrR0vE9gThr4 |               2019-07-05 |
 
-The next step is to convert pandas DataFrames in SQLite database, which is done with `sqlite3` as follows: 
+The next step was to convert pandas DataFrames in SQLite database, which is done with `sqlite3` as follows: 
 
 ```python
 import sqlite3
@@ -92,7 +92,7 @@ for i, df in enumerate(tables):
 
 ```
 
-Now, let's see what tables we have in `spotify.db`.
+Now, let's see what tables we have in `spotify.db`:
 
 ```python
 c.execute(  
@@ -129,11 +129,11 @@ from eralchemy import render_er
 render_er('sqlite:///spotify.db', 'spotify_er.png', mode = 'graph')
 ```
 
-Finally, we are ready to run SQL query on our normalized database!
+Finally, we are ready to run SQL queries on our normalized SQL database!
 
-## What are the names of playlists that contain instrumentals?
+## What Are the Names of  Playlists that Contain Instrumentals?
 
-First, let's see how many unique playlists there are that contain instrumental. 
+First, let's see how many unique playlists there are that contain instrumentals, where instrumental means that the song has no vocals and has above 0.5 value in the `instrumentalness` column.
 
 ```python
 from pandas import DataFrame
@@ -160,9 +160,9 @@ DataFrame(c.fetchall())
 | ---: | ---: |
 |    0 |  256 |
 
-There are 256 unique playlist that contain instrumentals, where instrumental means that the song has no vocals and has above 0.5 value in `instrumentalness` column.
+There are 256 unique playlists containing instrumentals. 
 
-Next, let's take a look at 10 playlist ordered in ascending order: 
+Next, let's take a look at 10 playlists ordered in ascending order: 
 
 ```python
 c.execute ("""
@@ -227,5 +227,5 @@ hardrock
 |    5 | 70s Hard Rock |                                    Heartbreaker |         Free |            0.707 |
 |    6 | 70s Hard Rock |                      Rockin' All Over The World |   Status Quo |            0.491 |
 
-Indeed, several tracks score high in `instrumentalness`. For example, the [Majestic song](https://www.youtube.com/watch?v=lifsbJ35j8s) seems majestically instrumental without a word!
+Indeed, several tracks score high in `instrumentalness`. For example, the [Majestic song](https://www.youtube.com/watch?v=lifsbJ35j8s) without a word is majestically instrumental!
 
