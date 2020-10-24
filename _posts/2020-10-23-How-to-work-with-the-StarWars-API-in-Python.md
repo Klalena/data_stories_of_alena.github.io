@@ -160,7 +160,7 @@ And the youngest character is Wicket Systri Warrick who was born in 8.0 BBY.
 
 Wow, Yoda is really old. No wonder why he is so wise! 
 
-# Find the films that the Yoda appeared in
+# Find the films that Yoda appeared in
 
 Since the `films` column contains a list of URLs of movies, we can extract the titles of these movie as follows: 
 
