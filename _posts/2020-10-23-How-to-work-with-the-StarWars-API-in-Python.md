@@ -76,6 +76,8 @@ people = [requests.get('https://swapi.dev/api/people/' + str(i)).json() for i in
 df = pd.json_normalize(people)
 ```
 
+
+
 ### Data Cleaning
 
 We have several variables for each character;  however, to answer our question, we will just need three columns: `name`, `bith_year`, and `films`. So, we will create a subset inducing only those  three variables. 
@@ -104,6 +106,8 @@ subset.shape
 ```python
 (43, 3)
 ```
+
+
 
 # Find the oldest character in the Star Wars Universe
 
