@@ -94,7 +94,7 @@ subset.head(3)
 Next, we will clean our data by removing observations with missing values ([#16](https://swapi.dev/api/people/17/) ) and with `unknown` `birth_year` as follows: 
 
 ```python
-#remove observations with 'uknown' years 
+#remove observations with 'unknown' years 
 subset = subset[subset.birth_year != 'unknown']
 #remove a record with missing data 
 subset = subset.drop(16).reset_index(drop = True)
@@ -153,6 +153,8 @@ print(f'The oldest charecter is {oldest.name.values[0]} who was born in {oldest.
 The oldest charecter is Yoda who was born in 896.0 BBY. 
 And the youngest character is Wicket Systri Warrick who was born in 8.0 BBY.
 ```
+
+Wow, Yoda is really old. No wonder why he is so wise! 
 
 # Find the films that the Yoda appeared in
 
