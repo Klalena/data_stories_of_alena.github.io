@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Working with the StarWars API in Python
-subtitle: Using `requests` package 
+subtitle: Using requests  package 
 cover-img: /assets/img/StarWars_API/yoda_cover.jpg
 thumbnail-img: /assets/img/StarWars_API/yoda.jpg
 tags: [StarWars API, REST API]
 
 ---
 
-As more companies provide access to their data through their APIs, it became increasingly common to use APIs to retrieve data. This tutorial will show how to get data from the [`SWAPI(The Star Wars API)`](https://swapi.dev/documentation) in Python using `requests` package and how to answer the following question: 
+As more companies provide access to their data through their APIs, it became increasingly common to use APIs to retrieve data. This tutorial will show how to get data from the [`SWAPI(The Star Wars API)`](https://swapi.dev/documentation) in Python using the `requests` package and how to answer the following question: 
 
 **Who is the oldest character in the Star Wars Universe and in which films it was appeared?**
 
 #  Get Data from the Star Wars API 
 
-To retrieve data from SWAPI, we will need to make request to that API. In Python, we will use `requests` package to do so (see below): 
+To retrieve data from SWAPI, we will need to make a request to that API. In Python, we will use the `requests` package to do so (see below): 
 
 ```python
 import requests
@@ -63,20 +63,20 @@ data['results'][0]
  'url': 'http://swapi.dev/api/people/1/'}
 ```
 
-However, current `response` only has data for 10 people. To get the data for all people, we will to need loop over urls for  all people (83) like this: 
+However, the current `response` only has data for 10 people. To get the data for all people, we will need to loop over URLs for all people (83) like this:  
 
 ```python
 people = [requests.get('https://swapi.dev/api/people/' + str(i)).json() for i in range(1, 84)]
 ```
 
- After getting all the data we need, we will convert it to DataFrame format. To do so, we will use `pd.json_normalize` which normalizes json data into a DataFrame. 
+ After getting all the data we need, we will convert it to the DataFrame format. To do so, we will use `pd.json_normalize` which normalizes JSON data into a DataFrame. 
 
 ```python
 #normalize json 
 df = pd.json_normalize(people)
 ```
 
-# Find the oldest character in the Star Wars Universe
+### Data Cleaning
 
 We have several variables for each character;  however, to answer our question, we will just need three columns: `name`, `bith_year`, and `films`. So, we will create a subset inducing only those  three variables. 
 
@@ -91,20 +91,92 @@ subset.head(3)
 |    1 |          C-3PO |     112BBY | [http://swapi.dev/api/films/1/, http://swapi.d... |
 |    2 |          R2-D2 |      33BBY | [http://swapi.dev/api/films/1/, http://swapi.d... |
 
+Next, we will clean our data by removing observations with missing values ([#16](https://swapi.dev/api/people/17/) ) and with `unknown` `birth_year` as follows: 
 
+```python
+#remove observations with 'uknown' years 
+subset = subset[subset.birth_year != 'unknown']
+#remove a record with missing data 
+subset = subset.drop(16).reset_index(drop = True)
+subset.shape
+```
 
+```python
+(43, 3)
+```
 
+# Find the oldest character in the Star Wars Universe
 
-We have several variables for each character;  however, to answer our question, we will just need three columns: `name`, `bith_year`, and `films`. So, we will create a subset inducing only those  three variables. 
+According to the [documentation](https://swapi.dev/documentation), `birth_year` is 'the birth year of the person, using the in-universe standard of BBY or ABY - Before the Battle of Yavin or After the Battle of Yavin. The Battle of Yavin is a battle that occurs at the end of Star Wars episode IV: A New Hope.'
 
-sample data 
+Let's check if we have characters from both periods. 
 
-conversion to json format 
+```python
+subset.birth_year.str.contains('BBY').sum()
+43
+```
 
-Who is the oldest charcter? 
+It seems that all characters were born Before the Battle of Yavin (BBY). 
 
-Wondering who is the youngest? 
+Next, we will need to extract `year` from `birth_year` column. We can do so using `regex` as shown below. 
 
-- include image (if possible)
+```python
+#Extract year from birth_year column and save it as DataFrame 'year'. 
+year = pd.DataFrame(subset.birth_year.str.extractall(r'(\d+.\d+|\d+)').astype(float)) 
+year = year.droplevel(1)
+year.columns = ['year']
+```
 
-In which movies Yoda was shot?  
+And concatenate both data frames `Year ` with `Subset`
+
+```python
+subset = pd.concat((subset,year), axis = 1)
+
+subset.head()
+```
+
+|      |           name | birth_year |                                             films |  year |
+| ---: | -------------: | ---------: | ------------------------------------------------: | ----: |
+|    0 | Luke Skywalker |      19BBY | [http://swapi.dev/api/films/1/, http://swapi.d... |  19.0 |
+|    1 |          C-3PO |     112BBY | [http://swapi.dev/api/films/1/, http://swapi.d... | 112.0 |
+|    2 |          R2-D2 |      33BBY | [http://swapi.dev/api/films/1/, http://swapi.d... |  33.0 |
+
+Finally, our dataset is ready. So, who is the oldest  and youngest character? Let's find out: 
+
+```python
+oldest = subset[subset.year == max(subset.year)]
+youngest = subset[subset.year == min(subset.year)] 
+print(f'The oldest charecter is {oldest.name.values[0]} who was born in {oldest.year.values[0]} BBY. \nAnd the youngest character is {youngest.name.values[0]} who was born in {youngest.year.values[0]} BBY.')
+```
+
+```python
+The oldest charecter is Yoda who was born in 896.0 BBY. 
+And the youngest character is Wicket Systri Warrick who was born in 8.0 BBY.
+```
+
+# Find the films that the Yoda appeared in
+
+Since the `films` column contains a list of urls of movies, we can extract the titles of this movie as follows: 
+
+```python
+#the following list comprehension pulls the data from API for each URL in the films column, converts it to JSON format, 
+#and pulls the title of the movie. 
+
+[j['title'] for j in [requests.get(i).json() for i in subset.films[oldest.index.values[0]]]]
+```
+
+```python
+['The Empire Strikes Back',
+ 'Return of the Jedi',
+ 'The Phantom Menace',
+ 'Attack of the Clones',
+ 'Revenge of the Sith']
+```
+
+Yoda, my favorite Star Wars character, appeared in five Star Wars movies. No wonder that my favorite Star Wars movies were with Yoda in them. 
+
+So, wise he is! Let me end this post with his quote: 
+
+`Try not. Do or do not. There is no try` -Yoda
+
+May the Force be with you. 
