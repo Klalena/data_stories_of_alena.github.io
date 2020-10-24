@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to work with the StarWars API in Python
+title: Working with the StarWars API in Python
 subtitle: Using `requests` package 
 cover-img: /assets/img/StarWars_API/yoda_cover.jpg
 thumbnail-img: /assets/img/StarWars_API/yoda.jpg
@@ -14,10 +14,14 @@ As more companies provide access to their data through their APIs, it became inc
 
 #  Get Data from the Star Wars API 
 
+To retrieve data from SWAPI, we will need to make request to that API. In Python, we will use `requests` package to do so as shown below: 
+
 ```python
 import requests
 url = 'http://swapi.dev/api/'
+#make request 
 response = requests.get(os.path.join(url, 'people/'))
+#convert to json format 
 data = response.json()
 ```
 
