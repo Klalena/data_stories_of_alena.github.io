@@ -3,7 +3,7 @@ layout: post
 title: How to work with the StarWars API in Python
 subtitle: Using `requests` package 
 cover-img: /assets/img/StarWars_API/yoda_cover.jpg
-image: /assets/img/StarWars_API/yoda.jpg
+thumbnail-img: /assets/img/StarWars_API/yoda.jpg
 tags: [StarWars API, REST API]
 
 ---
