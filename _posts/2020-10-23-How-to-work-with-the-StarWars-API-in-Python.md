@@ -158,7 +158,7 @@ Wow, Yoda is really old. No wonder why he is so wise!
 
 # Find the films that the Yoda appeared in
 
-Since the `films` column contains a list of urls of movies, we can extract the titles of this movie as follows: 
+Since the `films` column contains a list of URLs of movies, we can extract the titles of these movie as follows: 
 
 ```python
 #the following list comprehension pulls the data from API for each URL in the films column, converts it to JSON format, 
