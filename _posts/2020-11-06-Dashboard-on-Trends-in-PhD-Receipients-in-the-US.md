@@ -2,7 +2,7 @@
 layout: post
 title: Trends in PhD Recipients in the US 
 subtitle: Using Streamlit
-image: /assets/img/Dashboard_PhD/md-duran-1VqHRwxcCCw-unsplash.jpg
+thumbnail-img:/assets/img/Dashboard_PhD/md-duran-1VqHRwxcCCw-unsplash.jpg
 tags: [Dashboard, Streamlit]
 
 
