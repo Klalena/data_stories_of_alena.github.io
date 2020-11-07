@@ -23,7 +23,7 @@ To answer these question, I have created an interactive dashboard. I will leave 
 </body>
 
 
-  Dashboard, Stream
+
 
 
 
