@@ -13,7 +13,7 @@ full-width: true
 
 <body style="margin:0px;padding:0px;overflow:hidden">
 
-    <iframe src="https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
+    <iframe src="https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py" frameborder="0" scrolling = "no" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
 </body>
 
 
