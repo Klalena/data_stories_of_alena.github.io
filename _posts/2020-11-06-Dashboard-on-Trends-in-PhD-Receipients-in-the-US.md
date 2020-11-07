@@ -3,8 +3,9 @@ layout: post
 title: Trends in PhD Recipients in the US 
 subtitle: Using Streamlit
 thumbnail-img: /assets/img/Dashboard_PhD/md-duran-1VqHRwxcCCw-unsplash.jpg
+full-width: true
 tags: [Dashboard, Streamlit]
-full-width:true
+
 
 
 
@@ -24,7 +25,7 @@ To answer these questions, I have created an interactive [dashboard](https://sha
 
 
 
-You can find the code of streamlit dashboard [here](https://github.com/Klalena/Dashboard_on_PhD_data)
+You can find the code here](https://github.com/Klalena/Dashboard_on_PhD_data)
 
 
 
