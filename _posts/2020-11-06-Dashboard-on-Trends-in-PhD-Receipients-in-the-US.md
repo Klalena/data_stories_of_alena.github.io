@@ -16,7 +16,7 @@ In today's competitive world, more and more people enroll in doctorate programs 
 - Do more international student enroll in doctorate programs over time? Do particular fields of study attract more international students?  Is it because of the higher payoff in that field?  🤔 (Graph II)
 - What are the top countries of origin of international students? (Graph III)
 
-To answer these questions, I have created an interactive [dashboard](https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py) with Streamlit. I will leave it up to you to explore. 
+To answer these questions, I have created an interactive [dashboard](https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py) with Streamlit. Why don't you try to answer these questions using the dashboard below?
 
 <iframe width=700 height= 1700 frameborder=0 scrolling="no" src="https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py"></iframe> 
 
@@ -24,7 +24,7 @@ To answer these questions, I have created an interactive [dashboard](https://sha
 
 
 
-You can find code of streamlit dashboard [here](https://github.com/Klalena/Dashboard_on_PhD_data)
+You can find the code of streamlit dashboard [here](https://github.com/Klalena/Dashboard_on_PhD_data)
 
 
 
