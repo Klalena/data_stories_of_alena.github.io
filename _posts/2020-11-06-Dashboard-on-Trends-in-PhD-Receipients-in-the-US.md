@@ -19,7 +19,7 @@ In today's competitive world, more and more people enroll in doctorate programs 
 
 To answer these questions, I have created an interactive [dashboard](https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py) with Streamlit. Why don't you try to answer these questions using the dashboard below?
 
-<iframe width=700 height= 1700 frameborder=0 scrolling="no" src="https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py"></iframe> 
+<iframe width=900 height= 1700 frameborder=0 scrolling="no" src="https://share.streamlit.io/klalena/dashboard_on_phd_data/main/app.py"></iframe> 
 
 
 
