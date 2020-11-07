@@ -11,12 +11,13 @@ author: Alena Kalodzitsa
 navbar-links:
   About Me: "aboutme"
   Portfolio:
-
+    - Trends in PhD Recipients in the US: 'https://klalena.github.io/2020-11-06-Dashboard-on-Trends-in-PhD-Receipients-in-the-US/"
     - Working with the StarWars API in Python : "https://klalena.github.io/2020-10-23-How-to-work-with-the-StarWars-API-in-Python/"
     - How to Store Spotify Data in 3NF : "https://klalena.github.io/2020-10-09-How-to-Store-Spotify-Data-in-3NF/"
     - Trends of Malaria Cases Worldwide : "https://klalena.github.io/2020-10-02-Trends-of-Malaria-Cases-Worldwide/"
     - The Euler Project (problems 4, 35, and 112): "https://klalena.github.io/2020-08-11-The-Euler-Project/"
     - How To Make Personal Website Fast and Easy: "https://klalena.github.io/2020-08-28-How-to-Make-Personal-Website-Fast-and-Easy/"
+
 
 
   LinkedIn: "https://www.linkedin.com/in/alenakalodzitsa/"
