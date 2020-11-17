@@ -11,7 +11,8 @@ author: Alena Kalodzitsa
 navbar-links:
   About Me: "aboutme"
   Portfolio:
-
+    
+    - Insect Detection with Deep Learning: "https://klalena.github.io/2020-11-16-Insect-Image-Detection-using-Deep-Learning/"
     - Trends in PhD Recipients in the US: "https://klalena.github.io/2020-11-06-Dashboard-on-Trends-in-PhD-Receipients-in-the-US/"
     - Working with the StarWars API in Python : "https://klalena.github.io/2020-10-23-How-to-work-with-the-StarWars-API-in-Python/"
     - How to Store Spotify Data in 3NF : "https://klalena.github.io/2020-10-09-How-to-Store-Spotify-Data-in-3NF/"
