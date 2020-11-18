@@ -5,13 +5,16 @@ subtitle: Using Transfer Learning with VGG16
 cover-img: : /assets/img/network.jpg
 thumbnail-img: /assets/img/network.jpg
 tags: [Image Detection, VGG16]
+
 ---
+
+
 
 In this blog, I will show you how we can use transfer learning to classify beetles, cockroaches and dragonflies using this [image data](https://www.insectimages.org/index.cfm). 
 
 👩‍💻 The code and image data can be found [here](https://github.com/Klalena/BIOS823-Statistical_Programming-for-Big-Data/tree/master/Homework/Insect_classification).
 
-First, let's look at samples of our data. Here are sample images thee type of insects. 
+First, let's look at samples of our data. Here are sample images of three type of insects. 
 
 ![sample insects](../assets/img/Insect_classification/sample_insects.png)
 
@@ -23,7 +26,7 @@ It's composed of ...
 
 ![vgg16](../assets/img/Insect_classification/vgg16.png)
 
-​																		*Image from https://neurohive.io/*
+​																	          *Image from Neurohive*
 
 **ImageNet**: Database of around *15* million images with more than 1000 classes. 
 
