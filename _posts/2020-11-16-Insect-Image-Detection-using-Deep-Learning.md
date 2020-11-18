@@ -1,14 +1,13 @@
 ---
+
 layout: post
 title: Insects Classification using Deep Learning 
 subtitle: Using Transfer Learning with VGG16
-cover-img: : /assets/img/network.jpg
-thumbnail-img: /assets/img/network.jpg
+cover-img: /assets/img/network.jpg
+image: /assets/img/network.jpg
 tags: [Image Detection, VGG16]
 
 ---
-
-
 
 In this blog, I will show you how we can use transfer learning to classify beetles, cockroaches and dragonflies using this [image data](https://www.insectimages.org/index.cfm). 
 
@@ -30,7 +29,7 @@ It's composed of ...
 
 **ImageNet**: Database of around *15* million images with more than 1000 classes. 
 
-**Pre-training**: After a model is trained, the optimized parameters can be used to solve other tasks. For example, it took weeks to train VGG16. 
+**Pre-training**: After a model is trained, the optimized parameters can be used to solve other tasks. However, it takes days or weeks to train models on such large datasets like ImageNet and using pre-trained models for similar problems is a convenient and efficient way. It took weeks to train VGG16, but we can easily utilize optimized weights in `keras`. 
 
 
 
