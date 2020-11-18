@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Image Classification for Insects 
+title: Insects Classification using Deep Learning 
 subtitle: Using Transfer Learning with VGG16
 cover-img: : /assets/img/network.jpg
 thumbnail-img: /assets/img/network.jpg
-tags: [Image Detection, Deep Learning]
+tags: [Image Detection, VGG16]
 ---
 
 In this blog, I will show you how we can use transfer learning to classify beetles, cockroaches and dragonflies using this [image data](https://www.insectimages.org/index.cfm). 
