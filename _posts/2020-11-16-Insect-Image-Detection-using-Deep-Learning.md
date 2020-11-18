@@ -5,7 +5,7 @@ title: Insects Classification using Deep Learning
 subtitle: Transfer Learning with VGG16
 cover-img: /assets/img/network.jpg
 image: /assets/img/network.jpg
-tags: [Image Detection, VGG16]
+tags: [Image Classification, VGG16]
 
 ---
 
@@ -118,6 +118,8 @@ Let's see how the model performed on test data.
 ```python
 test_loss_vgg, test_acc_vgg = vgg_model.evaluate(X_test, y_test)
 ```
+
+
 
 # Results 
 
