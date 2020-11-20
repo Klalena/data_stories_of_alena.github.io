@@ -18,7 +18,7 @@ Here we have created
       <source type="video/mp4" src="/assets/img/Dashboard_on_MIMIC/app_demo.mp4" />
   </video>
 
-
+The Blog 
 
 
 
