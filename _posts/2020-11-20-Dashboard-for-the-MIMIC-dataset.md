@@ -70,8 +70,6 @@ In conclusion, the findings from the EDA described above indicate that Black pat
 
 
 
-
-
 **References**
 
 [1]    A. E. W. Johnson *et al.*, “MIMIC-III, a freely accessible critical care database,” *Sci. Data*, vol. 3, no. 1, p. 160035, Dec. 2016, doi: 10.1038/sdata.2016.35.
