@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dashboard: Trends in PhD Recipients in the US 
+title: Dashboard on Trends in PhD Recipients in the US 
 subtitle: Using Streamlit
 thumbnail-img: /assets/img/Dashboard_PhD/md-duran-1VqHRwxcCCw-unsplash.jpg
 full-width: true
