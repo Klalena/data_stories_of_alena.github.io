@@ -17,7 +17,7 @@ Our primary goal was to produce a dashboard for Physicians and Hospital Administ
 
 Also, this dashboard can help to identify which diseases are occurring together. This information could be useful for physicians and can be used to investigate potential preventative care options. 
 
-The demo of the app presented below.  
+The demo of the app presented below: 
 
 <video autoplay width="100%" height="400" controls="controls" preload="none">
       <!-- MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7 -->
@@ -25,6 +25,8 @@ The demo of the app presented below.
   </video>
 
 
+
+👩‍💻 You can find the code for our dashboard [here](https://github.com/Klalena/MIMIC-Analysis).
 
 # Data and Workflow 
 
