@@ -32,7 +32,7 @@ The demo of the app presented below:
 
 The data for the analysis comes from the MIMIC-III Critical Care Database, which was developed by the MIT Lab for Computational Physiology and contains health-related data of over 60, 000 patients who stayed in critical care units in Beth Israel Deaconess Medical Center (Boston, MA) between 2001 and 2012 [1].  The dataset contains data on patients’ demographics, diagnoses, prescriptions, admission details, and other health-related information. Figure 1 below displays the workflow for this project, where three main tools were used to create a dashboard: Amazon Web Services (AWS) to access data, Python for the analysis, and Streamlit to create and deploy the dashboard.
 
-![workflow](/Users/lenakl/Documents/MIDS/Courses/Fall 2020 Courses/Big Data/Klalena.github.io/assets/img/Dashboard_on_MIMIC/workflow.png)
+![workflow](../assets/img/Dashboard_on_MIMIC/workflow.png)
 
 *Figure 1: MIMIC Project Workflow*   
 
@@ -42,13 +42,13 @@ In this blog, I will only highlight a few interesting findings form the dashboar
 
 The first finding from the EDA is the dominance of White patients in the hospital. Figure 2 below shows that the majority of patients were White, while there were only a few thousand Asian patients. This could indicate that the geographic area where Beth Israel Deaconess Medical Center is located in an affluent area, which is primarily populated by White citizens.
 
-![ethinicity](/Users/lenakl/Documents/MIDS/Courses/Fall 2020 Courses/Big Data/Klalena.github.io/assets/img/Dashboard_on_MIMIC/Patients_ethnicity.png)
+![ethinicity](../assets/img/Dashboard_on_MIMIC/Patients_ethnicity.png)
 
 *Figure 2: Patients by Ethnicity (MIMIC dataset)*
 
 Delving into disease composition, the top five most common diseases relate to either heart, blood, or kidney problems. As can be seen from Figure 3 below, the top 5 most common disease are Hypertension NOS (Not Otherwise Specified), CHF NOS (Congestive heart failure), Atrial Fibrillation, Coronary atherosclerosis of native coronary artery (abbreviated as Crnry athrsci natve vssi in the figure 3), and Acute Kidney Failure
 
-![diseases](/Users/lenakl/Documents/MIDS/Courses/Fall 2020 Courses/Big Data/Klalena.github.io/assets/img/Dashboard_on_MIMIC/top_diseases.png)
+![diseases](../assets/img/Dashboard_on_MIMIC/top_diseases.png)
 
  
 
@@ -56,7 +56,7 @@ Delving into disease composition, the top five most common diseases relate to ei
 
 The third finding from the EDA is that the most frequent diseases differ by race. This is most prominent between White and Black. For example, as can be seen from Figure 4, the top five most common diseases for white patients are consistent with the top five for all patients (Figure 3). However, the second most common disease for Black patients is End Stage Renal disease, which is not even included in the top ten common diseases for white patients (Figure 4). 
 
-![disease_by_race](/Users/lenakl/Documents/MIDS/Courses/Fall 2020 Courses/Big Data/Klalena.github.io/assets/img/Dashboard_on_MIMIC/diseases_by_race.png)
+![disease_by_race](../assets/img/Dashboard_on_MIMIC/diseases_by_race.png)
 
 *Figure 4: Top 10 most common diseases for White (left) and Black (right)* 
 
@@ -64,7 +64,7 @@ End Stage Renal disease is a chronic kidney disease at an advanced stage where k
 
 The data support this argument that patients are mainly diagnosed with End Stage Renal disease during emergency room admissions as compared to other diseases. As Figure 5 below shows, emergency room admissions account for around 77% of the admission locations for End Stage Renal disease. This is substantially higher as compared to the other most common diseases such as Hypertension NOS and Atrial Fibrillation, where emergency room admissions account for around 67% of cases. 
 
-![admissions](/Users/lenakl/Documents/MIDS/Courses/Fall 2020 Courses/Big Data/Klalena.github.io/assets/img/Dashboard_on_MIMIC/admission_locations.png)
+![admissions](../assets/img/Dashboard_on_MIMIC/admission_locations.png)
 
 In conclusion, the findings from the EDA described above indicate that Black patients are more likely to have the most common diseases as compared to White patients, possibly indicating that Black patients choose to go to the hospital only when their health is in a critical condition. This could potentially be due to economic disparity between White and Black populations. However, since the analysis was conducted only on the dataset from one hospital located in Boston, these findings cannot yet be generalized to different hospitals. To overcome this limitation, further research should compare whether these patterns persist among other similar hospitals.
 
